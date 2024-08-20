@@ -29,18 +29,19 @@ export async function getShows() {
     });
 
     // Mengambil data yang dibutuhkan dari response
-    const shows = response.data.data.map((show) => ({
+    const shows = response.data.data.map((show, index) => ({
       id: show.id,
       title: show.title,
-      photo: show.photo || '/assets/images/movies/default.jpg', // Default photo jika null
+      photo: show.photo || '/assets/images/movies/default.jpg', // Default photo if null
       description: show.description,
       duration: show.duration,
       rating: show.rating,
       price: show.price,
-      theaterName: show.theater.name, // Mengambil name dari theater
-      showDate: show.showtime.showDate, // Mengambil showDate dari showtime
+      theaterName: show.theater.name, // Assuming `name` is a property of `theater`
+      showDate: show.showtime.showDate, // Assuming `showDate` is a property of `showtime`
     }));
 
+    
     return shows;
   } catch (error) {
     console.error('Failed to fetch shows:', error);

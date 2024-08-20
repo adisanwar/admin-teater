@@ -47,11 +47,11 @@ export default function AccountPopover() {
           },
         });
 
-        console.log(response.data)
+        // console.log(response.data)
         
 
         const contact = response.data.data[0]; // Akses elemen pertama dari array
-        console.log(contact.fullname);
+        // console.log(contact.fullname);
         setFullname(contact.fullname || ''); // Ensure fullname is not undefined
         setPhoto(contact.photo || ''); // Ensure photo is not undefined
         setEmail(contact.email || ''); // Set email // Ensure photo is not undefined

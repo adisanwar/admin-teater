@@ -11,7 +11,7 @@ import { visuallyHidden } from './utils';
 
 // ----------------------------------------------------------------------
 
-export default function OrderTableHead({
+export default function ShowTableHead({
   order,
   orderBy,
   rowCount,
@@ -62,7 +62,7 @@ export default function OrderTableHead({
   );
 }
 
-OrderTableHead.propTypes = {
+ShowTableHead.propTypes = {
   order: PropTypes.oneOf(['asc', 'desc']),
   orderBy: PropTypes.string,
   rowCount: PropTypes.number,
@@ -71,3 +71,4 @@ OrderTableHead.propTypes = {
   onRequestSort: PropTypes.func,
   onSelectAllClick: PropTypes.func,
 };
+
