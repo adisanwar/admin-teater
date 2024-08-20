@@ -7,6 +7,7 @@ import ProtectedRoute from './protected-route';
 
 export const IndexPage = lazy(() => import('src/pages/app'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
+export const ShowPage = lazy(() => import('src/pages/show'));
 export const UserPage = lazy(() => import('src/pages/user'));
 export const LoginPage = lazy(() => import('src/pages/login'));
 export const ProductsPage = lazy(() => import('src/pages/products'));
@@ -32,7 +33,7 @@ export default function Router() {
         { path: 'user', element: <UserPage /> },
         { path: 'order', element: <UserPage /> },
         { path: 'tiket', element: <UserPage /> },
-        { path: 'show', element: <UserPage /> },
+        { path: 'show', element: <ShowPage /> },
         { path: 'theater', element: <UserPage /> },
       ],
     },

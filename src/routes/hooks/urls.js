@@ -28,6 +28,9 @@ class ApiConfig {
       return `${this.baseUrl}/contacts`;
     }
    
+    getShow() {
+      return `${this.baseUrl}/shows/current`;
+    }
 
     
   }
